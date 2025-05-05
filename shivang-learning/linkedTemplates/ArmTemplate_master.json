@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "shivang-learning"
+		},
+		"linked_sg_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linked_sg_blob'"
+		},
+		"linked_sg_db_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linked_sg_db'"
+		},
+		"linked_sg_db_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sg-server.database.windows.net"
+		},
+		"linked_sg_db_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sg-database"
+		},
+		"linked_sg_db_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sg-admin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "shivang-learning_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"linked_sg_blob_connectionString": {
+						"value": "[parameters('linked_sg_blob_connectionString')]"
+					},
+					"linked_sg_db_password": {
+						"value": "[parameters('linked_sg_db_password')]"
+					},
+					"linked_sg_db_properties_typeProperties_server": {
+						"value": "[parameters('linked_sg_db_properties_typeProperties_server')]"
+					},
+					"linked_sg_db_properties_typeProperties_database": {
+						"value": "[parameters('linked_sg_db_properties_typeProperties_database')]"
+					},
+					"linked_sg_db_properties_typeProperties_userName": {
+						"value": "[parameters('linked_sg_db_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

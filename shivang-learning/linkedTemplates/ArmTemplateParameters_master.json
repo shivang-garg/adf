@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "shivang-learning"
+		},
+		"linked_sg_blob_connectionString": {
+			"value": ""
+		},
+		"linked_sg_db_password": {
+			"value": ""
+		},
+		"linked_sg_db_properties_typeProperties_server": {
+			"value": "sg-server.database.windows.net"
+		},
+		"linked_sg_db_properties_typeProperties_database": {
+			"value": "sg-database"
+		},
+		"linked_sg_db_properties_typeProperties_userName": {
+			"value": "sg-admin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
