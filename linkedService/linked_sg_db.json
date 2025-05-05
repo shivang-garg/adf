@@ -1,0 +1,17 @@
+{
+	"name": "linked_sg_db",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sg-server.database.windows.net",
+			"database": "sg-database",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sg-admin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDg3MEU2QzU4LUQ1QTctNDU4MC05QjY4LTYwNzI1OEY2MDg5Ql82MGU0MThhNi0xNTNkLTQ5ZmYtYmNjYS0wYzhhYmQzNjVmZWQiDQp9"
+		}
+	}
+}

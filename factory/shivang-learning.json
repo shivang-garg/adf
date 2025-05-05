@@ -1,0 +1,9 @@
+{
+	"name": "shivang-learning",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "65015fad-50ea-4db9-9e7a-b121e682688a",
+		"tenantId": "ff8ca89e-ae41-4f0e-a79a-b3f40eefdc83"
+	}
+}
