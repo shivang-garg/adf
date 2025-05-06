@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "copyFactorySG"
+		},
+		"copy_connectionString": {
+			"value": ""
+		},
+		"source_to_DB_EMP_password": {
+			"value": ""
+		},
+		"source_to_DB_EMP_properties_typeProperties_server": {
+			"value": "sg-server.database.windows.net"
+		},
+		"source_to_DB_EMP_properties_typeProperties_database": {
+			"value": "sg-database"
+		},
+		"source_to_DB_EMP_properties_typeProperties_userName": {
+			"value": "sg-admin"
+		}
+	}
+}
