@@ -1,0 +1,9 @@
+{
+	"name": "copyFactorySG",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "89d07f04-3bd0-4754-98c2-68e6fc571b40",
+		"tenantId": "ff8ca89e-ae41-4f0e-a79a-b3f40eefdc83"
+	}
+}
